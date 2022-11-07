@@ -1,17 +1,11 @@
 DEBUT
-r = 12000
-s = 1250
-e = 10
-rh = 230
+assertionDeux = (365 * 3) / (4 - (12 - 8)) * (rh) > r == (e * s < r)
 
-((365 * 3) / (24 - (16 - 8))) = 68.4375
-684375 * (rh) = 15740.625
-15740.625 > r == true
+assertionDeuxpt1 = (365 * 3) / (4 - (12 - 8)) * (rh) > r # false
+assertionDeuxpt2 = (e * s < r) # false
 
-e * s = 12500
-12500 < r == false
-
-# (false == true) == false
-
-# assertion1 = (((365 * 3) / (24 - (16 - 8))) * (rh) > r == (e * s < r)) == false
+#assertionDeux === (assertionDeuxpt1 == assertionDeuxpt2)
+#assertionDeux === (assertionDeuxpt1 == false)
+#assertionDeux === (false == false)
+print(assertionDeux)
 FIN
