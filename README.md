@@ -1,3 +1,1 @@
 *oke*
-éoémek
-ui
