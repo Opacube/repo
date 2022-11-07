@@ -8,4 +8,7 @@ assertionDeuxpt2 = (e * s < r) # false
 #assertionDeux === (assertionDeuxpt1 == false)
 #assertionDeux === (false == false)
 print(assertionDeux)
+
+
+
 FIN
