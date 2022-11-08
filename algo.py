@@ -1,33 +1,17 @@
-def add(x, y):
-    return (x + y)
-add(1, 3)
-
-def sub(x, y):
-    return (x - y)
-sub(5, 6)
-
-def multiply(x, y):
-    return (x * y)
-multiply (6, 9)
-
-def divide(x, y):
-    return (x / y)
-divide (20, 2)
-
-def modulo(x, y):
-    return (x % y)
-modulo (10,2)
+#Créer une fonction input qui renvoie un caractère de type string and hasard
+#Afficher le caractère
+#Si le caractère est égal au caractère à deviner
+#Afficher un message de victoire
+#Sinon afficher un message de défaite
 
 
-def salaire_seconde(y, x, z):
-    salaire_heure = y
-    heure_jour = x
-    nombre_jours = z
-    salaireseconde = ((y / 3600) * x * z) / 365
-    return salaireseconde
-salaire_seconde(12, 6, 200)
 
+def input(): #renvoie un caractere de type string au hasard
 
-def net(x):
-    return (x * 0.23)
-net(1700)
+car = "o" #Créer le caractère gagnant
+str = input() #Créer une variable associée au numéro au hasard
+
+if str == car: #Si le caractère au hasard est égal à celui que l'on cherche
+    print("Bravo, vous avez gagné !") #Afficher le message de victoire
+else : #Sinon
+    print("Vous avez perdu !") #Afficher le message de défaite
