@@ -18,7 +18,7 @@
             #Sinon si la variable choix comprant le string "ciseaux"
                 #Alors implémenter 2 dans choixJoueur1
             #Sinon
-                #Afficher un message indiquant l'utilisateur que la réponse est erronée
+                #Alors afficher un message indiquant l'utilisateur que la réponse est erronée
 
         #Executer la fonction random et l'implémenter à la variable choixPC
 
@@ -52,13 +52,26 @@
         #Si son choix est oui
             #Alors rappeler la fonction pierre feuille ciseaux
         #Sinon
-            #Afficher un message d'au revoir avec le résultat final comprenant le nombre de parties gagnées, perdues et de rounds joués
+            #Alors afficher un message d'au revoir avec le résultat final comprenant le nombre de parties gagnées, perdues et de rounds joués
 #Fin de la fonction
 
 #Executer la fonction
 #FIN
 
 
+n1 = 0
+nterms = int(input("Entrez le nombre de termes que vous voulez afficher: "))
+print("OK.")
+n2 = int(input("Entrez la valeur par laquelle vous souhaitez commencer: "))
+print("La suite fibonacci en commençant par " + str(2) + " est :")
+print(n1, ",", n2, end= ", ")
+ 
+for i in range(2, nterms):
+  index = n1 + n2
+  print(index, end= ", ")
+ 
+  n1 = n2
+  n2 = index
 
 
 
