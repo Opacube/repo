@@ -61,19 +61,23 @@
 
 
 #FIBONACCI
-n1 = 0
-nterms = int(input("Entrez le nombre de termes que vous voulez afficher: "))
-print("OK.")
-n2 = int(input("Entrez la valeur par laquelle vous souhaitez commencer: "))
-print("La suite fibonacci en commençant par " + str(2) + " est :")
-print(n1, ",", n2, end= ", ")
- 
-for i in range(2, nterms):
-  index = n1 + n2
-  print(index, end= ", ")
- 
-  n1 = n2
-  n2 = index
+def Fibonacci():
+    n1 = 0
+    nterms = int(input("Entrez le nombre de termes que vous voulez afficher: "))
+    print("OK.")
+    n2 = int(input("Entrez la valeur par laquelle vous souhaitez commencer: "))
+    print("La suite fibonacci en commençant par " + str(2) + " est :")
+    print(n1, ",", n2, end= ", ")
+
+    for i in range(2, nterms):
+        index = n1 + n2
+    print(index, end= ", ")
+
+    n1 = n2
+    n2 = index
+
+
+
 
 
 
