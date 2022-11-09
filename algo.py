@@ -48,7 +48,7 @@
 
         #Afficher le choix original de l'ordinateur pour informer le joueur
         #Incrémenter 1 à la variable round
-    #Demander au joueur si il veut continuer et récupérer son choix avec un input
+    #Demander au joueur si il veut continuer et récupérer son choix avec un input dans keepPlaying
         #Si son choix est oui
             #Alors rappeler la fonction pierre feuille ciseaux
         #Sinon
