@@ -59,6 +59,8 @@
 #FIN
 
 
+
+#FIBONACCI
 n1 = 0
 nterms = int(input("Entrez le nombre de termes que vous voulez afficher: "))
 print("OK.")
