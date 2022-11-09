@@ -1,3 +1,67 @@
+#DEBUT
+#On admet une fonction random qui retourne un chiffre entre 0 et 2 inclus
+#On admet une fonction input qui récupère le choix du joueur
+#Creer une variable keepPlaying sur Vrai qui permettra de savoir si le joueur veut continuer de jouer
+#Creer une variable round pour savoir combien de rounds ont été joués et la définir sur 0
+#Creer une variable winJoueur pour savoir combien de parties le joueur a gagné et la définir sur 0
+#Creer une variable defaiteJoueur pour savoir combien de parties le joueur a perdu et la définir sur 0
+
+#Creer une fonction pierre feuille ciseaux qui permettra de jouer au jeu
+
+    #Afficher les règles du jeu dont les 3 choix à faire et quel choix l'emporte sur lequel
+    #Tant que keepPlaying est sur Vrai
+        #Laisser le joueur rentrer son choix grâce à la fonction input et l'implémenter dans la variable choix
+            #Si la variable choix comprant le string "pierre"
+                #Alors Implémenter 0 dans choixJoueur1
+            #Sinon si la variable choix comprant le string "feuille"
+                #Alors Implémenter 1 dans choixJoueur1
+            #Sinon si la variable choix comprant le string "ciseaux"
+                #Alors implémenter 2 dans choixJoueur1
+            #Sinon
+                #Afficher un message indiquant l'utilisateur que la réponse est erronée
+
+        #Executer la fonction random et l'implémenter à la variable choixPC
+
+        #Si la variable choixJoueur1 est de valeur 0
+            #Si la variable choixPC est de valeur 0
+                #Il y a égalité, on affiche le message d'égalité
+            #Si la variable choixPC est de valeur 1
+                #L'ordinateur gagne, on affiche le message de défaite et on incrémente 1 à la variable defaiteJoueur
+            #Si la variable choixPC est de valeur 1
+                #L'ordinateur perd, on affiche le message de victoire et on incrémente 1 à la variable winJoueur 
+        
+        #Si la variable choixJoueur1 est de valeur 1
+            #Si la variable choixPC est de valeur 1
+                #Il y a égalité, on affiche le message d'égalité
+            #Si la variable choixPC est de valeur 2
+                #L'ordinateur gagne, on affiche le message de défaite et on incrémente 1 à la variable defaiteJoueur
+            #Si la variable choixPC est de valeur 0
+                #L'ordinateur perd, on affiche le message de victoire et on incrémente 1 à la variable winJoueur 
+
+        #Si la variable choixJoueur1 est de valeur 2
+            #Si la variable choixPC est de valeur 2
+                #Il y a égalité, on affiche le message d'égalité
+            #Si la variable choixPC est de valeur 0
+                #L'ordinateur gagne, on affiche le message de défaite et on incrémente 1 à la variable defaiteJoueur
+            #Si la variable choixPC est de valeur 1
+                #L'ordinateur perd, on affiche le message de victoire et on incrémente 1 à la variable winJoueur 
+
+        #Afficher le choix original de l'ordinateur pour informer le joueur
+        #Incrémenter 1 à la variable round
+    #Demander au joueur si il veut continuer et récupérer son choix avec un input
+        #Si son choix est oui
+            #Alors rappeler la fonction pierre feuille ciseaux
+        #Sinon
+            #Afficher un message d'au revoir avec le résultat final comprenant le nombre de parties gagnées, perdues et de rounds joués
+#Fin de la fonction
+
+#Executer la fonction
+#FIN
+
+
+
+
+
 #EXERCICE 1
 tablo = [0,10, 15, 5, 72, 87, 2, 3, 5, 6, 1, 9, 0] #Creer le premier tableau
 tablo2 = [10,210, 315, 45, 572, 687, 72, 83, 95, 106, 111, 129, 130] #Creer le deuxième tableau
@@ -20,8 +84,20 @@ def occuration (tableau, occurence): #creation de la fonction occuration
     return index #fermer la fonction et renvoyer la valeur
 print(occuration(tableau, 0)) #afficher la fonction
 
-
-
+def occuratione (tableau, x):#Definir une fonction qui prend une liste tableau et une variable x quelconque
+    i = 0 #Initialiser i a 0
+    chaineResultat = "" #Definir chaineResultat en tant que string vide
+    firstTurn = True
+    while i < len(tableau) : #Tant que i est inferieur a la longueur de tableau
+        if tableau[i] == x:
+            if firstTurn:
+                chaineResultat = str(i) + ", "
+                firstTurn = False
+            else :
+                chaineResultat = chaineResultat + str(i) + ", " #Alors on assigne a chaineResultat le retour de concatWithComma(chaineResultat, str(i))
+        i = i + 1 #On incremente i de 1
+    return chaineResultat
+print(occuratione(tableau, 0))
 
 #EXERCICE 3
 #Faire une fonction afficher un message
