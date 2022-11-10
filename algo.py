@@ -77,7 +77,19 @@ def Fibonacci():
     n2 = exitnum
 
 
+import random
 
+
+#JEU DE LA VIE
+def jeuDeLaVie():
+    jdlv_list = [random.randint(0,1) for i in range()]
+
+#CREER UNE LISTE AVEC ALEATOIREMENT DES 0 ET 1
+#AFFICHER CETTE LISTE X FOIS
+#SI IL Y A PLUS DE 2 CELLULES ADJASCENTES
+    #LA CELLULE MEURT
+#SINON
+    #ELLE SE REPRODUIT
 
 
 
