@@ -70,11 +70,11 @@ def Fibonacci():
     print(n1, ",", n2, end= ", ")
 
     for i in range(2, nterms):
-        index = n1 + n2
-    print(index, end= ", ")
+        exitnum = n1 + n2
+    print(exitnum, end= ", ")
 
     n1 = n2
-    n2 = index
+    n2 = exitnum
 
 
 
