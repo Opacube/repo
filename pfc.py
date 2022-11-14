@@ -124,6 +124,3 @@ def pfc():
 pfc()
 #Executer la fonction
 #FIN
-
-
-        while choix != 1 and choix != 2 and choix != 3 and choix != 4 and choix != 5 and choix != 6 and choix != 7 and choix != 8 and choix != 9 :
