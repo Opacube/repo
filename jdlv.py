@@ -16,6 +16,8 @@ top = [(x - 1), y]
 bottom = [(x + 1), y]
 left = [x, (y - 1)]
 right = [x, (y + 1)]
+coordinates = [top, bottom, left, right]
+print("Top: ", "\n", coordinates[0])
 if x - 1 >= 0:
     print("Top : ", top)
 else :
