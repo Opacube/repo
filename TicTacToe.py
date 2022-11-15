@@ -43,6 +43,7 @@ def morpion(turn, nbtour):
         checkIfWin("J1", nbtour)
     #Quand c'est le tour du Joueur 2
     elif turn == "J2" :
+
         verifbot(nbtour)
 
         #TOUR 1
@@ -54,7 +55,8 @@ def morpion(turn, nbtour):
                 x[0][2] = "✕"
                 nbtour = nbtour + 1
 
-        if nbtour == 3 :
+
+        elif nbtour == 3 :
             #COIN HAUT GAUCHE
             if x[0][0] == "⊛" :
                 if x[2][1] == "⊛":
@@ -346,6 +348,42 @@ def verifbot(nbtour) :
         nbtour = nbtour + 1
         return
     else :
+        if x[0][0] == "▢" :
+            x[0][0] = "✕"
+            nbtour = nbtour + 1
+            return
+        elif x[0][1] == "▢" :
+            x[0][1] = "✕"
+            nbtour = nbtour + 1
+            return
+        elif x[0][2] == "▢" :
+            x[0][2] = "✕"
+            nbtour = nbtour + 1
+            return
+        elif x[1][0] == "▢" :
+            x[1][0] = "✕"
+            nbtour = nbtour + 1
+            return
+        elif x[1][1] == "▢" :
+            x[1][1] = "✕"
+            nbtour = nbtour + 1
+            return
+        elif x[1][2] == "▢" :
+            x[1][2] = "✕"
+            nbtour = nbtour + 1
+            return
+        elif x[2][0] == "▢" :
+            x[2][0] = "✕"
+            nbtour = nbtour + 1
+            return
+        elif x[2][1] == "▢" :
+            x[2][1] = "✕"
+            nbtour = nbtour + 1
+            return
+        elif x[2][2] == "▢" :
+            x[2][2] = "✕"
+            nbtour = nbtour + 1
+            return
         return
     
 
