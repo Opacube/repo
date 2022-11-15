@@ -1,10 +1,47 @@
+import tkinter as tk
+from tkinter import font
+
+def main() :
+    board = TicTacToe()
+    board.mainloop()
+    
+if __name__ == "__main__" :
+    main()
+
+class TicTacToe(tk.Tk) :
+    def __init__ (self) :
+        super().__init__(self)
+        self.title("Tic Tac Toe")
+        self._cells = {}
+        self.board()
+        self.grid()
+    
+    def board(self) :
+        display_frame = tk.Frame(master=self)
+        display_frame.pack(fill=tk.X)
+        self.display = tk.Label(master = display_frame, text = "Ready?", font=font.Font(size=28, weight = "bold"))
+        self.display.pack()
+    
+    def grid(self) :
+        grid_frame = tk.Frame(master=self)
+        grid_frame.pack()
+        for row in range(3) :
+            self.rowconfigure(row, weight = 1, minsize = 50)
+            self.columnconfigure(row, weight = 1, minsize = 75)
+            for col in range (3) :
+                button = tk.Button(master=grid_frame, text="", font=font.Font(size=36, weight="bold"), fg="black", width=3, height=2, highlightbackground="lightblue")
+                self._cells[button] = (row, col)
+                button.grid(row=row, column=col, padx=5, pady=5, sticky="nsew")
+
+
+
 x = [["▢", "▢", "▢"], ["▢", "▢", "▢"], ["▢", "▢", "▢"]]
 print("\033[1;33;40m\nVoici le tableau du jeu ainsi que les coordonnées de chaque case : \n")
 print(x[0][0], " ", x[0][1], " ", x[0][2], "   1   2   3")
 print(x[1][0], " ", x[1][1], " ", x[1][2], "   4   5   6")
 print(x[2][0], " ", x[2][1], " ", x[2][2], "   7   8   9")
 
-def morpion(turn):
+def morpion(turn): 
     if turn == "J1" :
         choix = input("J1 : Insérer la case que vous voulez changer : ")
         #ligne 1
@@ -95,7 +132,7 @@ def reset():
     print(x[2][0], " ", x[2][1], " ", x[2][2], "   7   8   9")
     morpion("J1")
 
-
+#Verifier si un joueur a gagné
 def checkIfWin(turn):
     #JOUEUR 1
     if turn == "J1" :
