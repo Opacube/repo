@@ -98,3 +98,16 @@ def login(username, password, listUser): #creation de la fonction login
     else: #sinon
         print("Le mot de passe ou l'utilisateur est incorrect") #affichage d'un message disant que la connexion a échouée
     return #fermer la fonction
+
+
+        #Tant que le choix du joueur "re" est différent de "oui"
+        while re != "oui":
+            #Si la réponse du joueur est "non"
+            if re == "non" :
+                #Alors afficher un message d'au revoir
+                print("Au revoir !")
+                return None
+            #Sinon
+            else :
+                #Alors afficher un message d'erreur et redemander le choix du joueur
+                re = input("Réponse incorrecte. Voulez-vous recommencer ? ")
