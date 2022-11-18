@@ -144,7 +144,15 @@ def morpion(turn, nbtour):
         #Si le tour est le cinquième, vérifier que les mouvements seulement réalisables au tour 5 et non pris en compte par la fonction "verifbot" soient existant et les contrer
         #Sinon, appeler la fonction "verifbot"
         elif nbtour == 5 :
-            if x[0][1] == "⊛" and x[2][0] == "⊛" and x[2][2] == "⊛" :
+            if x[0][0] == "⊛" and x[0][2] == "⊛" and x[2][1] == "⊛" :
+                x[2][0] = "✕"
+            elif x[2][2] == "⊛" and x[0][2] == "⊛" and x[1][0] == "⊛" :
+                x[0][0] = "✕"
+            elif x[0][1] == "⊛" and x[2][2] == "⊛" and x[2][0] == "⊛" :
+                x[0][2] = "✕"
+            elif x[1][2] == "⊛" and x[0][0] == "⊛" and x[2][0] == "⊛" :
+                x[2][2] = "✕"
+            elif x[0][1] == "⊛" and x[2][0] == "⊛" and x[2][2] == "⊛" :
                 x[2][1] = "✕"
                 nbtour = nbtour + 1
             elif x[1][2] == "⊛" and x[0][0] == "⊛" and x[2][0] == "⊛" :
@@ -182,8 +190,12 @@ def morpion(turn, nbtour):
                 #Alors afficher un message d'au revoir et terminer le code (return ne fonctionne pas pour dieu ne sait quelle raison)
                 print("Au revoir !")
                 exit()
-            #Si le choix du joueur est "oui"
-            elif re == "oui" :
+            #Sinon
+            else :
+                #Alors afficher un message d'erreur et redemander le choix du joueur
+                re = input("Réponse incorrecte. Voulez-vous recommencer ? ")
+        #Sinon
+        else :
                 #Afficher un message de bonne chance
                 print("Bonne chance !")
                 #Réinitialiser le tableau du morpion
@@ -205,10 +217,6 @@ def morpion(turn, nbtour):
                 nbtour = 0
                 #Appeler la fonction "morpion" avec comme paramètre le joueur dont c'est le tour
                 morpion("J1", nbtour)
-            #Sinon
-            else :
-                #Alors afficher un message d'erreur et redemander le choix du joueur
-                re = input("Réponse incorrecte. Voulez-vous recommencer ? ")
 
 #Créer une fonction "verifbot" qui permettra de vérifier si il y a 2 croix dans la même ligne, colonne ou diagonale et de compléter avec une troisième croix
 #Et si il n'y a aucune croix à compléter, alors vérifier si il y a 2 cercles dans la même ligne, colonne ou diagonale et compléter la troisième case avec une croix
