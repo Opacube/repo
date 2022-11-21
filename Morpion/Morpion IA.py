@@ -144,28 +144,7 @@ def morpion(turn, nbtour):
         #Si le tour est le cinquième, vérifier que les mouvements seulement réalisables au tour 5 et non pris en compte par la fonction "verifbot" soient existant et les contrer
         #Sinon, appeler la fonction "verifbot"
         elif nbtour == 5 :
-            if x[0][0] == "⊛" and x[0][2] == "⊛" and x[2][1] == "⊛" :
-                x[2][0] = "✕"
-            elif x[2][2] == "⊛" and x[0][2] == "⊛" and x[1][0] == "⊛" :
-                x[0][0] = "✕"
-            elif x[0][1] == "⊛" and x[2][2] == "⊛" and x[2][0] == "⊛" :
-                x[0][2] = "✕"
-            elif x[1][2] == "⊛" and x[0][0] == "⊛" and x[2][0] == "⊛" :
-                x[2][2] = "✕"
-            elif x[0][1] == "⊛" and x[2][0] == "⊛" and x[2][2] == "⊛" :
-                x[2][1] = "✕"
-                nbtour = nbtour + 1
-            elif x[1][2] == "⊛" and x[0][0] == "⊛" and x[2][0] == "⊛" :
-                x[1][0] = "✕"
-                nbtour = nbtour + 1
-            elif x[2][1] == "⊛" and x[0][0] == "⊛" and x[0][2] == "⊛" :
-                x[0][1] = "✕"
-                nbtour = nbtour + 1
-            elif x[1][0] == "⊛" and x[0][2] == "⊛" and x[2][2] == "⊛" :
-                x[1][2] = "✕"
-                nbtour = nbtour + 1
-            else :
-                verifbot(nbtour)
+            verifbot(nbtour)
 
         #Si le tour est le septième, appeler la fonction "verifbot qui saura contrer n'importe quel mouvement du septième tour"
         elif nbtour == 7 :
@@ -485,32 +464,32 @@ def checkIfWin(turn, nbtour):
 
         #Si une des trois lignes comprant 3 cercles
         #Alors le joueur 1 gagne et on renvoie la fonction morpion avec la fin de match comme condition après afficher que le joueur a gagné
-        if x[0][0] == "⊛"  and x[0][1] == "⊛"  and x[0][2] == "⊛" :
+        if x[0][0] == "⊛" and x[0][1] == "⊛" and x[0][2] == "⊛" :
             print("J1 Wins")
             morpion("no", nbtour)
-        elif x[1][0] == "⊛"  and x[1][1] == "⊛"  and x[1][2] == "⊛" :
+        elif x[1][0] == "⊛" and x[1][1] == "⊛" and x[1][2] == "⊛" :
             print("J1 Wins")
             morpion("no", nbtour)
-        elif x[2][0] == "⊛"  and x[2][1] == "⊛"  and x[2][2] == "⊛" :
+        elif x[2][0] == "⊛" and x[2][1] == "⊛" and x[2][2] == "⊛" :
             print("J1 Wins")
             morpion("no", nbtour)
         #Si une des trois colonnes comprant 3 cercles
         #Alors le joueur 1 gagne et on renvoie la fonction morpion avec la fin de match comme condition après afficher que le joueur a gagné
-        elif x[0][0] == "⊛"  and x[1][0] == "⊛"  and x[2][0] == "⊛" :
+        elif x[0][0] == "⊛" and x[1][0] == "⊛" and x[2][0] == "⊛" :
             print("J1 Wins")
             morpion("no", nbtour)
-        elif x[0][1] == "⊛"  and x[1][1] == "⊛"  and x[2][1] == "⊛" :
+        elif x[0][1] == "⊛" and x[1][1] == "⊛" and x[2][1] == "⊛" :
             print("J1 Wins")
             morpion("no", nbtour)
-        elif x[0][2] == "⊛"  and x[1][2] == "⊛"  and x[2][2] == "⊛" :
+        elif x[0][2] == "⊛" and x[1][2] == "⊛" and x[2][2] == "⊛" :
             print("J1 Wins")
             morpion("no", nbtour)
         #Si une des deux diagonales comprant 3 cercles
         #Alors le joueur 1 gagne et on renvoie la fonction morpion avec la fin de match comme condition après afficher que le joueur a gagné
-        elif x[0][0] == "⊛"  and x[1][1] == "⊛"  and x[2][2] == "⊛" :
+        elif x[0][0] == "⊛" and x[1][1] == "⊛" and x[2][2] == "⊛" :
             print("J1 Wins")
             morpion("no", nbtour)
-        elif x[0][2] == "⊛"  and x[1][1] == "⊛"  and x[2][0] == "⊛" :
+        elif x[0][2] == "⊛" and x[1][1] == "⊛" and x[2][0] == "⊛" :
             print("J1 Wins")
             morpion("no", nbtour)
         #Si le tour est le neuvième et donc après avoir vérifier si le joueur a gagné
