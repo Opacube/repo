@@ -83,7 +83,7 @@ def morpion(turn, nbtour):
             nbtour = nbtour + 1
             morpion("J2", nbtour)
 
-        #Si le tour est le troisième, vérifier que les mouvements seulement réalisables au tour 3 et non pris en compte par la fonction "verifbot" soient existant et les contrer
+        #Sinon si le tour est le troisième, vérifier que les mouvements seulement réalisables au tour 3 et non pris en compte par la fonction "verifbot" soient existant et les contrer
         #Sinon, appeler la fonction "verifbot"
         elif nbtour == 3 :
             #Coin haut gauche
@@ -141,12 +141,11 @@ def morpion(turn, nbtour):
             else : 
                 verifbot(nbtour)
 
-        #Si le tour est le cinquième, vérifier que les mouvements seulement réalisables au tour 5 et non pris en compte par la fonction "verifbot" soient existant et les contrer
-        #Sinon, appeler la fonction "verifbot"
+        #Sinon si le tour est le cinquiè^me appeler la fonction "verifbot"
         elif nbtour == 5 :
             verifbot(nbtour)
 
-        #Si le tour est le septième, appeler la fonction "verifbot qui saura contrer n'importe quel mouvement du septième tour"
+        #Sinon si le tour est le septième, appeler la fonction "verifbot qui saura contrer n'importe quel mouvement du septième tour"
         elif nbtour == 7 :
             verifbot(nbtour)
 
@@ -158,7 +157,7 @@ def morpion(turn, nbtour):
         #Appeler la fonction "checkIfWin" pour le joueur 2 qui vérifiera si ce joueur a gagné la partie ou non (ici le bot)
         checkIfWin("J2", nbtour)
 
-    #Si ce n'est pas le tour d'un joueur et donc que quelqu'un a gagné la partie ou qu'il y a égalité
+    #Sinon si ce n'est pas le tour d'un joueur et donc que quelqu'un a gagné la partie ou qu'il y a égalité
     elif turn == "no" :
         #Alors demander au joueur si il veut recommencer et implémenter son choix dans la variable "re"
         re = input("Voulez-vous recommencer ? ")
